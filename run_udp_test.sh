@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # ===== CONFIG =====
-PCAP_FILE="/mnt/d/Project_Networking_Phase1/udp_test_capture.pcap"
-TEST_DURATION=300   # default duration in seconds
+PCAP_FILE="/mnt/d/Github/Network-Project/udp_test_capture.pcap"
+TEST_DURATION=1   # default duration in seconds
 INTERFACE="lo"     # network interface (adjust if needed)
 
 # ===== SCENARIO SELECTION =====
@@ -41,14 +41,14 @@ sudo tcpdump -i $INTERFACE udp -w $PCAP_FILE &
 TCPDUMP_PID=$!
 
 # ===== START SERVER =====
-python3 /mnt/d/Project_Networking_Phase1/server.py &
+python3 /mnt/d/Github/Network-Project/server.py &
 SERVER_PID=$!
 
 # ===== GIVE SERVER TIME TO START =====
 sleep 2
 
 # ===== START CLIENT =====
-python3 /mnt/d/Project_Networking_Phase1/client.py &
+python3 /mnt/d/Github/Network-Project/client.py &
 CLIENT_PID=$!
 
 # ===== RUN TEST FOR FIXED DURATION =====
@@ -56,10 +56,13 @@ sleep $TEST_DURATION
 
 # ===== STOP ALL PROCESSES =====
 kill $CLIENT_PID
-kill $SERVER_PID
+kill -SIGINT $SERVER_PID
 sudo kill $TCPDUMP_PID
 
 # ===== CLEANUP NETEM =====
 sudo tc qdisc del dev $INTERFACE root 2>/dev/null
 
 echo "Test complete. Packet capture saved as $PCAP_FILE"
+
+# ========== Analyze Results ===========
+python /mnt/d/Github/Network-Project/createGraphs.py

@@ -2,10 +2,13 @@ import socket
 import struct 
 import time
 import random
+import threading
 
-def calculateChecksum(data):
-    return sum(data) % 65536
+# ==========================================
+#          CLIENT CONFIGURATION
+# ==========================================
 
+#Sensor stuff
 class SensorMessage:
     def __init__(self, device_id, seq_num, checksum=None, sensor_data=None, msg_type=1):
         self.device_id = device_id  
@@ -20,20 +23,71 @@ headerFormat = "! B H H I B H" #corresponding to our desired header format of th
 headerSize = struct.calcsize(headerFormat)
 payloadMaxSize = packetSize - headerSize
 
-dataInterval = 1
+def calculateChecksum(data):
+    return sum(data) % 65536
+
+#intervals to send data
+dataInterval = 0.02
 heartBeatInterval = 5
-                      
+
+ackTimeout = 1
+maxRetries = 5
+packetBuffer = {}
+bufferLock = threading.Lock()
+
+#connection stuff                      
 serverHost = '127.0.0.1'
 serverPort = 5005
 sensor = SensorMessage(device_id=1, seq_num=0)
 
-#connection type 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)#AF_INET is for the version and DGRAM IS for UDP connection
 
 print(f"[Client] Device {sensor.device_id} started, sending to {serverHost}:{serverPort}")
 
 seqNumber = 0
 lastDataTime = 0
+
+# ==================================
+#            FUNCTIONS               
+# ==================================
+
+def recieveAck():
+    try:
+        data, addr = client_socket.recvfrom(256)
+        if len(data) >= headerSize:
+            msgType, ackDeviceId, ackSeq, _, _, _ = struct.unpack(headerFormat, data[:headerSize])
+            if msgType == 3:  # ACK
+                print(f"[Client] Received ACK for seq={ackSeq} from device={ackDeviceId}")
+                with bufferLock:
+                    if ackSeq in packetBuffer:
+                        del packetBuffer[ackSeq]
+                        print(f"[Client] Removed seq={ackSeq} from buffer")
+
+    except socket.timeout:
+        # No ACK received in this check
+        pass
+
+def resendPacket():
+    currentTime = time.time()
+    with bufferLock:
+        for seq, info in list(packetBuffer.items()):
+            if currentTime - info['timestamp'] > ackTimeout:
+                if info['retries'] >= maxRetries:
+                    print(f"[Client] Packet seq={seq} dropped after {maxRetries} retries")
+                    del packetBuffer[seq]
+                else:
+                    client_socket.sendto(info['packet'], (serverHost, serverPort))
+                    info['timestamp'] = currentTime
+                    info['retries'] += 1
+                    print(f"[Client] Resent packet seq={seq}, retry={info['retries']}")
+                    
+
+def ackAndResendThread():
+    while True:
+        recieveAck()      
+        resendPacket()    
+        time.sleep(0.1)   
+
 
 def sendPacket(msgType, readings=None, batchingAllowed=False):
     global seqNumber
@@ -49,6 +103,8 @@ def sendPacket(msgType, readings=None, batchingAllowed=False):
         header = struct.pack(headerFormat, msgType, sensor.device_id, seqNumber, timestamp, batchCount, checksum)
         packet = header + payload
         client_socket.sendto(packet, (serverHost, serverPort))
+        
+        
         print(f"[Client] Sent type={msgType}, seq={seqNumber}, batch={batchCount}, checksum={checksum}")
         return
 
@@ -67,6 +123,10 @@ def sendPacket(msgType, readings=None, batchingAllowed=False):
         header = struct.pack(headerFormat, msgType, sensor.device_id, seqNumber, timestamp, batchCount, checksum)
         packet = header + payload
         client_socket.sendto(packet, (serverHost, serverPort))
+        
+        with bufferLock:
+                packetBuffer[seqNumber] = {'packet': packet, 'timestamp': time.time(), 'retries': 0}
+        
         print(f"[Client] Sent type={msgType}, seq={seqNumber}, batch={batchCount}, checksum={checksum}")
 
     else:
@@ -77,17 +137,23 @@ def sendPacket(msgType, readings=None, batchingAllowed=False):
             batchCount = 1
 
             if len(payload) > payloadMaxSize:
-                payload = payload[:payloadMaxSize] #truncate
+                payload = payload[:payloadMaxSize] #truncate bye bye 
 
             tempHeader = struct.pack(headerFormat, msgType, sensor.device_id, seqNumber, timestamp, batchCount, 0)
             checksum = calculateChecksum(tempHeader + payload)
             header = struct.pack(headerFormat, msgType, sensor.device_id, seqNumber, timestamp, batchCount, checksum)
             packet = header + payload
             client_socket.sendto(packet, (serverHost, serverPort))
+            
+            with bufferLock:
+                packetBuffer[seqNumber] = {'packet': packet, 'timestamp': time.time(), 'retries': 0}
+                
             print(f"[Client] Sent type={msgType}, seq={seqNumber}, batch={batchCount}, checksum={checksum}")
 
 try:
     batchingmode = True
+    threading.Thread(target=ackAndResendThread, daemon=True).start()
+    
     while True:
 
         if random.random() < 0.8:
