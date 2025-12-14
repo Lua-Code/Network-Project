@@ -27,10 +27,10 @@ def calculateChecksum(data):
     return sum(data) % 65536
 
 #intervals to send data
-dataInterval = 0.02
+dataInterval = 1
 heartBeatInterval = 5
 
-ackTimeout = 1
+ackTimeout = 2
 maxRetries = 5
 packetBuffer = {}
 bufferLock = threading.Lock()
@@ -41,6 +41,7 @@ serverPort = 5005
 sensor = SensorMessage(device_id=1, seq_num=0)
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)#AF_INET is for the version and DGRAM IS for UDP connection
+client_socket.settimeout(0.1)
 
 print(f"[Client] Device {sensor.device_id} started, sending to {serverHost}:{serverPort}")
 

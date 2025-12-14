@@ -2,8 +2,14 @@
 
 # ===== CONFIG =====
 PCAP_FILE="/mnt/d/Github/Network-Project/udp_test_capture.pcap"
-TEST_DURATION=1   # default duration in seconds
+TEST_DURATION=60   # default duration in seconds
 INTERFACE="lo"     # network interface (adjust if needed)
+
+
+# ======== LOG ========
+LOG_FILE="/mnt/d/Github/Network-Project/test_run_$(date +%Y%m%d_%H%M%S).txt"
+
+exec > >(tee -a "$LOG_FILE") 2>&1
 
 # ===== SCENARIO SELECTION =====
 echo "Select test scenario:"
@@ -56,7 +62,7 @@ sleep $TEST_DURATION
 
 # ===== STOP ALL PROCESSES =====
 kill $CLIENT_PID
-kill -SIGINT $SERVER_PID
+kill $SERVER_PID
 sudo kill $TCPDUMP_PID
 
 # ===== CLEANUP NETEM =====
@@ -65,4 +71,4 @@ sudo tc qdisc del dev $INTERFACE root 2>/dev/null
 echo "Test complete. Packet capture saved as $PCAP_FILE"
 
 # ========== Analyze Results ===========
-python /mnt/d/Github/Network-Project/createGraphs.py
+python3 /mnt/d/Github/Network-Project/createGraphs.py

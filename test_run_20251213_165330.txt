@@ -1,0 +1,523 @@
+Select test scenario:
+1) Baseline (no impairment)
+2) Loss 5%
+3) Delay + Jitter (100ms ±10ms)
+Enter choice [1-3]: Running Baseline scenario...
+tcpdump: listening on lo, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+Meow, Server is Up and running!
+[Server] Device:1, Seq:1, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=25.33,hum=46.95
+[Server] Sent ACK to Device:1, Seq:1, Checksum:536
+[Server] Device:1, Seq:2, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=23.37,hum=40.93
+  Reading 1: temp=23.44,hum=51.33
+[Server] Sent ACK to Device:1, Seq:2, Checksum:537
+[Server] Device:1, Seq:3, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=25.73,hum=44.33
+  Reading 1: temp=21.75,hum=47.15
+[Server] Sent ACK to Device:1, Seq:3, Checksum:538
+[Server] Device:1, Seq:4, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.02,hum=42.87
+  Reading 1: temp=20.52,hum=53.02
+  Reading 2: temp=24.69,hum=47.45
+[Server] Sent ACK to Device:1, Seq:4, Checksum:539
+[Server] Device:1, Seq:5, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.96,hum=47.11
+  Reading 1: temp=27.39,hum=41.38
+[Server] Sent ACK to Device:1, Seq:5, Checksum:540
+[Server] Device:1, Seq:6, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.91,hum=55.14
+  Reading 1: temp=26.37,hum=52.8
+[Server] Sent ACK to Device:1, Seq:6, Checksum:541
+[Server] Device:1, Seq:7, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.17,hum=53.94
+[Server] Sent ACK to Device:1, Seq:7, Checksum:543
+[Server] Device:1, Seq:8, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=22.13,hum=51.36
+[Server] Sent ACK to Device:1, Seq:8, Checksum:544
+[Server] Device:1, Seq:9, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.83,hum=52.34
+[Server] Sent ACK to Device:1, Seq:9, Checksum:545
+[Server] Device:1, Seq:10, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.36,hum=56.78
+  Reading 1: temp=21.32,hum=51.56
+[Server] Sent ACK to Device:1, Seq:10, Checksum:546
+[Server] Device:1, Seq:11, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=23.13,hum=49.72
+  Reading 1: temp=23.29,hum=41.82
+[Server] Sent ACK to Device:1, Seq:11, Checksum:547
+[Server] Device:1, Seq:12, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.11,hum=44.59
+  Reading 1: temp=29.55,hum=53.66
+[Server] Sent ACK to Device:1, Seq:12, Checksum:548
+[Server] Device:1, Seq:13, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.25,hum=42.25
+[Server] Sent ACK to Device:1, Seq:13, Checksum:549
+[Server] Device:1, Seq:14, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.52,hum=59.64
+  Reading 1: temp=20.37,hum=59.1
+  Reading 2: temp=23.19,hum=51.03
+[Server] Sent ACK to Device:1, Seq:14, Checksum:551
+[Server] Device:1, Seq:15, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.99,hum=48.93
+  Reading 1: temp=27.79,hum=40.82
+  Reading 2: temp=25.36,hum=47.82
+[Server] Sent ACK to Device:1, Seq:15, Checksum:552
+[Server] Device:1, Seq:16, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.91,hum=41.55
+  Reading 1: temp=21.91,hum=50.07
+  Reading 2: temp=25.44,hum=49.58
+[Server] Sent ACK to Device:1, Seq:16, Checksum:553
+[Server] Device:1, Seq:17, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.06,hum=55.57
+  Reading 1: temp=25.78,hum=47.11
+  Reading 2: temp=27.4,hum=48.94
+[Server] Sent ACK to Device:1, Seq:17, Checksum:554
+[Server] Device:1, Seq:18, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.43,hum=50.17
+  Reading 1: temp=24.59,hum=51.93
+  Reading 2: temp=20.78,hum=49.94
+[Server] Sent ACK to Device:1, Seq:18, Checksum:555
+[Server] Device:1, Seq:19, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=22.36,hum=49.17
+  Reading 1: temp=27.9,hum=54.91
+[Server] Sent ACK to Device:1, Seq:19, Checksum:556
+[Server] Device:1, Seq:20, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.16,hum=46.03
+  Reading 1: temp=27.41,hum=48.03
+  Reading 2: temp=25.99,hum=52.37
+[Server] Sent ACK to Device:1, Seq:20, Checksum:557
+[Server] Device:1, Seq:21, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=25.29,hum=58.02
+  Reading 1: temp=27.36,hum=58.14
+  Reading 2: temp=25.04,hum=58.59
+[Server] Sent ACK to Device:1, Seq:21, Checksum:558
+[Server] Device:1, Seq:22, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.16,hum=52.95
+  Reading 1: temp=24.71,hum=41.31
+  Reading 2: temp=22.05,hum=47.34
+[Server] Sent ACK to Device:1, Seq:22, Checksum:559
+[Server] Device:1, Seq:23, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=21.39,hum=54.11
+  Reading 1: temp=20.37,hum=41.81
+  Reading 2: temp=25.03,hum=46.39
+[Server] Sent ACK to Device:1, Seq:23, Checksum:561
+[Server] Device:1, Seq:24, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.26,hum=51.92
+[Server] Sent ACK to Device:1, Seq:24, Checksum:562
+[Server] Device:1, Seq:25, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.34,hum=46.64
+  Reading 1: temp=29.1,hum=45.15
+[Server] Sent ACK to Device:1, Seq:25, Checksum:563
+[Server] Device:1, Seq:26, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=23.29,hum=47.3
+  Reading 1: temp=26.35,hum=44.42
+[Server] Sent ACK to Device:1, Seq:26, Checksum:564
+[Server] Device:1, Seq:27, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.47,hum=40.14
+[Server] Sent ACK to Device:1, Seq:27, Checksum:565
+[Server] Device:1, Seq:28, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=26.63,hum=58.15
+  Reading 1: temp=24.87,hum=54.8
+  Reading 2: temp=25.54,hum=47.6
+[Server] Sent ACK to Device:1, Seq:28, Checksum:566
+[Server] Device:1, Seq:29, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.68,hum=52.73
+[Server] Sent ACK to Device:1, Seq:29, Checksum:567
+[Server] Device:1, Seq:30, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.77,hum=55.65
+[Server] Sent ACK to Device:1, Seq:30, Checksum:568
+[Server] Device:1, Seq:31, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.34,hum=49.17
+  Reading 1: temp=24.9,hum=46.78
+[Server] Sent ACK to Device:1, Seq:31, Checksum:569
+[Server] Device:1, Seq:32, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=25.04,hum=41.82
+  Reading 1: temp=27.7,hum=44.34
+  Reading 2: temp=24.0,hum=47.87
+[Server] Sent ACK to Device:1, Seq:32, Checksum:571
+[Server] Device:1, Seq:33, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.77,hum=44.31
+[Server] Sent ACK to Device:1, Seq:33, Checksum:572
+[Server] Device:1, Seq:34, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.08,hum=53.35
+  Reading 1: temp=25.11,hum=55.09
+  Reading 2: temp=28.63,hum=49.72
+[Server] Sent ACK to Device:1, Seq:34, Checksum:573
+[Server] Device:1, Seq:35, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.22,hum=59.31
+  Reading 1: temp=27.98,hum=47.38
+  Reading 2: temp=22.92,hum=42.35
+[Server] Sent ACK to Device:1, Seq:35, Checksum:574
+[Server] Device:1, Seq:36, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.37,hum=41.49
+  Reading 1: temp=28.37,hum=59.88
+  Reading 2: temp=23.16,hum=42.25
+[Server] Sent ACK to Device:1, Seq:36, Checksum:575
+[Server] Device:1, Seq:37, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.04,hum=52.44
+  Reading 1: temp=21.23,hum=42.86
+  Reading 2: temp=27.25,hum=53.58
+[Server] Sent ACK to Device:1, Seq:37, Checksum:576
+[Server] Device:1, Seq:38, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=22.8,hum=50.39
+  Reading 1: temp=26.53,hum=47.34
+  Reading 2: temp=22.68,hum=55.64
+[Server] Sent ACK to Device:1, Seq:38, Checksum:577
+[Server] Device:1, Seq:39, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=26.03,hum=59.87
+  Reading 1: temp=26.55,hum=57.6
+[Server] Sent ACK to Device:1, Seq:39, Checksum:578
+[Server] Device:1, Seq:40, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=26.87,hum=44.14
+[Server] Sent ACK to Device:1, Seq:40, Checksum:580
+[Server] Device:1, Seq:41, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.94,hum=44.77
+  Reading 1: temp=28.8,hum=49.21
+[Server] Sent ACK to Device:1, Seq:41, Checksum:581
+[Server] Device:1, Seq:42, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.25,hum=43.72
+[Server] Sent ACK to Device:1, Seq:42, Checksum:582
+[Client] Device 1 started, sending to 127.0.0.1:5005
+[Client] Sent type=1, seq=1, batch=1, checksum=1982
+[Client] Received ACK for seq=1 from device=1
+[Client] Removed seq=1 from buffer
+[Client] Sent type=1, seq=2, batch=2, checksum=3537
+[Client] Received ACK for seq=2 from device=1
+[Client] Removed seq=2 from buffer
+[Client] Sent type=1, seq=3, batch=2, checksum=3545
+[Client] Received ACK for seq=3 from device=1
+[Client] Removed seq=3 from buffer
+[Client] Sent type=1, seq=4, batch=3, checksum=5111
+[Client] Received ACK for seq=4 from device=1
+[Client] Removed seq=4 from buffer
+[Client] Sent type=1, seq=5, batch=2, checksum=3559
+[Client] Received ACK for seq=5 from device=1
+[Client] Removed seq=5 from buffer
+[Client] Sent type=1, seq=6, batch=2, checksum=3505
+[Client] Received ACK for seq=6 from device=1
+[Client] Removed seq=6 from buffer
+[Client] Sent type=1, seq=7, batch=1, checksum=1990
+[Client] Received ACK for seq=7 from device=1
+[Client] Removed seq=7 from buffer
+[Client] Sent type=1, seq=8, batch=1, checksum=1976
+[Client] Received ACK for seq=8 from device=1
+[Client] Removed seq=8 from buffer
+[Client] Sent type=1, seq=9, batch=1, checksum=1990
+[Client] Received ACK for seq=9 from device=1
+[Client] Removed seq=9 from buffer
+[Client] Sent type=1, seq=10, batch=2, checksum=3560
+[Client] Received ACK for seq=10 from device=1
+[Client] Removed seq=10 from buffer
+[Client] Sent type=1, seq=11, batch=2, checksum=3553
+[Client] Received ACK for seq=11 from device=1
+[Client] Removed seq=11 from buffer
+[Client] Sent type=1, seq=12, batch=2, checksum=3563
+[Client] Received ACK for seq=12 from device=1
+[Client] Removed seq=12 from buffer
+[Client] Sent type=1, seq=13, batch=1, checksum=1984
+[Client] Sent type=1, seq=14, batch=3, checksum=5074
+[Client] Received ACK for seq=13 from device=1
+[Client] Removed seq=13 from buffer
+[Client] Sent type=1, seq=15, batch=3, checksum=5159
+[Client] Received ACK for seq=14 from device=1
+[Client] Removed seq=14 from buffer
+[Client] Received ACK for seq=15 from device=1
+[Client] Removed seq=15 from buffer
+[Client] Sent type=1, seq=16, batch=3, checksum=5129
+[Client] Received ACK for seq=16 from device=1
+[Client] Removed seq=16 from buffer
+[Client] Sent type=1, seq=17, batch=3, checksum=5095
+[Client] Received ACK for seq=17 from device=1
+[Client] Removed seq=17 from buffer
+[Client] Sent type=1, seq=18, batch=3, checksum=5137
+[Client] Received ACK for seq=18 from device=1
+[Client] Removed seq=18 from buffer
+[Client] Sent type=1, seq=19, batch=2, checksum=3523
+[Client] Received ACK for seq=19 from device=1
+[Client] Removed seq=19 from buffer
+[Client] Sent type=1, seq=20, batch=3, checksum=5136
+[Client] Received ACK for seq=20 from device=1
+[Client] Removed seq=20 from buffer
+[Client] Sent type=1, seq=21, batch=3, checksum=5144
+[Client] Received ACK for seq=21 from device=1
+[Client] Removed seq=21 from buffer
+[Client] Sent type=1, seq=22, batch=3, checksum=5118
+[Client] Received ACK for seq=22 from device=1
+[Client] Removed seq=22 from buffer
+[Client] Sent type=1, seq=23, batch=3, checksum=5124
+[Client] Received ACK for seq=23 from device=1
+[Client] Removed seq=23 from buffer
+[Client] Sent type=1, seq=24, batch=1, checksum=2002
+[Client] Received ACK for seq=24 from device=1
+[Client] Removed seq=24 from buffer
+[Client] Sent type=1, seq=25, batch=2, checksum=3519
+[Client] Received ACK for seq=25 from device=1
+[Client] Removed seq=25 from buffer
+[Client] Sent type=1, seq=26, batch=2, checksum=3520
+[Client] Received ACK for seq=26 from device=1
+[Client] Removed seq=26 from buffer
+[Client] Sent type=1, seq=27, batch=1, checksum=2003
+[Client] Received ACK for seq=27 from device=1
+[Client] Removed seq=27 from buffer
+[Client] Sent type=1, seq=28, batch=3, checksum=5056
+[Client] Received ACK for seq=28 from device=1
+[Client] Removed seq=28 from buffer
+[Client] Sent type=1, seq=29, batch=1, checksum=2017
+[Client] Received ACK for seq=29 from device=1
+[Client] Removed seq=29 from buffer
+[Client] Sent type=1, seq=30, batch=1, checksum=2023
+[Client] Received ACK for seq=30 from device=1
+[Client] Removed seq=30 from buffer
+[Client] Sent type=1, seq=31, batch=2, checksum=3535
+[Client] Received ACK for seq=31 from device=1
+[Client] Removed seq=31 from buffer
+[Client] Sent type=1, seq=32, batch=3, checksum=5043
+[Client] Received ACK for seq=32 from device=1
+[Client] Removed seq=32 from buffer
+[Client] Sent type=1, seq=33, batch=1, checksum=2013
+[Client] Received ACK for seq=33 from device=1
+[Client] Removed seq=33 from buffer
+[Client] Sent type=1, seq=34, batch=3, checksum=5151
+[Client] Received ACK for seq=34 from device=1
+[Client] Removed seq=34 from buffer
+[Client] Sent type=1, seq=35, batch=3, checksum=5163
+[Client] Received ACK for seq=35 from device=1
+[Client] Removed seq=35 from buffer
+[Client] Sent type=1, seq=36, batch=3, checksum=5163
+[Client] Received ACK for seq=36 from device=1
+[Client] Removed seq=36 from buffer
+[Client] Sent type=1, seq=37, batch=3, checksum=5149
+[Client] Received ACK for seq=37 from device=1
+[Client] Removed seq=37 from buffer
+[Client] Sent type=1, seq=38, batch=3, checksum=5109
+[Client] Received ACK for seq=38 from device=1
+[Client] Removed seq=38 from buffer
+[Client] Sent type=1, seq=39, batch=2, checksum=3550
+[Client] Received ACK for seq=39 from device=1
+[Client] Removed seq=39 from buffer
+[Client] Sent type=1, seq=40, batch=1, checksum=2025
+[Client] Received ACK for seq=40 from device=1
+[Client] Removed seq=40 from buffer
+[Client] Sent type=1, seq=41, batch=2, checksum=3548
+[Client] Received ACK for seq=41 from device=1
+[Client] Removed seq=41 from buffer
+[Client] Sent type=1, seq=42, batch=1, checksum=2025
+[Client] Received ACK for seq=42 from device=1
+[Client] Removed seq=42 from buffer
+[Client] Sent type=1, seq=43, batch=1, checksum=2022
+[Client] Received ACK for seq=43 from device=1
+[Client] Removed seq=43 from buffer
+[Client] Sent type=1, seq=44, batch=1, checksum=1973
+[Client] Received ACK for seq=44 from device=1
+[Client] Removed seq=44 from buffer
+[Client] Sent type=1, seq=45, batch=3, checksum=5055
+[Client] Received ACK for seq=45 from device=1
+[Client] Removed seq=45 from buffer
+[Client] Sent type=1, seq=46, batch=3, checksum=5175
+[Client] Received ACK for seq=46 from device=1
+[Client] Removed seq=46 from buffer
+[Client] Sent type=1, seq=47, batch=1, checksum=2029
+[Client] Received ACK for seq=47 from device=1
+[Client] Removed seq=47 from buffer
+[Client] Sent type=1, seq=48, batch=2, checksum=3603
+[Client] Sent type=1, seq=49, batch=2, checksum=3597
+[Client] Received ACK for seq=48 from device=1
+[Client] Removed seq=48 from buffer
+[Client] Sent type=1, seq=50, batch=3, checksum=5179
+[Client] Received ACK for seq=49 from device=1
+[Client] Removed seq=49 from buffer
+[Client] Sent type=1, seq=51, batch=1, checksum=2031
+[Client] Received ACK for seq=50 from device=1
+[Client] Removed seq=50 from buffer
+[Client] Received ACK for seq=51 from device=1
+[Client] Removed seq=51 from buffer
+[Client] Sent type=1, seq=52, batch=1, checksum=1988
+[Client] Received ACK for seq=52 from device=1
+[Client] Removed seq=52 from buffer
+[Client] Sent type=1, seq=53, batch=1, checksum=2044
+[Client] Received ACK for seq=53 from device=1
+[Client] Removed seq=53 from buffer
+[Client] Sent type=1, seq=54, batch=2, checksum=3600
+[Client] Received ACK for seq=54 from device=1
+[Client] Removed seq=54 from buffer
+[Client] Sent type=1, seq=55, batch=2, checksum=3616
+[Client] Received ACK for seq=55 from device=1
+[Client] Removed seq=55 from buffer
+[Client] Sent type=1, seq=56, batch=3, checksum=5098
+[Client] Received ACK for seq=56 from device=1
+[Client] Removed seq=56 from buffer
+[Client] Sent type=1, seq=57, batch=3, checksum=5139
+[Client] Received ACK for seq=57 from device=1
+[Client] Removed seq=57 from buffer
+[Client] Sent type=1, seq=58, batch=2, checksum=3617
+[Client] Received ACK for seq=58 from device=1
+[Client] Removed seq=58 from buffer
+[Client] Sent type=1, seq=59, batch=3, checksum=5178
+[Client] Received ACK for seq=59 from device=1
+[Client] Removed seq=59 from buffer
+[Client] Sent type=1, seq=60, batch=1, checksum=2051
+[Client] Received ACK for seq=60 from device=1
+[Client] Removed seq=60 from buffer
+148 packets captured
+320 packets received by filter
+0 packets dropped by kernel
+Test complete. Packet capture saved as /mnt/d/Github/Network-Project/udp_test_capture.pcap
+Traceback (most recent call last):
+  File "/mnt/d/Github/Network-Project/createGraphs.py", line 1, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+[Server] Device:1, Seq:43, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.31,hum=50.93
+[Server] Sent ACK to Device:1, Seq:43, Checksum:583
+[Server] Device:1, Seq:44, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=23.45,hum=50.9
+[Server] Sent ACK to Device:1, Seq:44, Checksum:584
+[Server] Device:1, Seq:45, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=25.1,hum=48.3
+  Reading 1: temp=27.02,hum=52.48
+  Reading 2: temp=24.21,hum=49.48
+[Server] Sent ACK to Device:1, Seq:45, Checksum:585
+[Server] Device:1, Seq:46, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.16,hum=52.67
+  Reading 1: temp=28.88,hum=58.82
+  Reading 2: temp=25.14,hum=54.56
+[Server] Sent ACK to Device:1, Seq:46, Checksum:586
+[Server] Device:1, Seq:47, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.65,hum=47.26
+[Server] Sent ACK to Device:1, Seq:47, Checksum:588
+[Server] Device:1, Seq:48, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.48,hum=58.66
+  Reading 1: temp=27.08,hum=40.73
+[Server] Sent ACK to Device:1, Seq:48, Checksum:589
+[Server] Device:1, Seq:49, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=22.64,hum=43.82
+  Reading 1: temp=20.56,hum=54.91
+[Server] Sent ACK to Device:1, Seq:49, Checksum:590
+[Server] Device:1, Seq:50, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.13,hum=48.36
+  Reading 1: temp=27.79,hum=49.87
+  Reading 2: temp=20.03,hum=50.82
+[Server] Sent ACK to Device:1, Seq:50, Checksum:591
+[Server] Device:1, Seq:51, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.31,hum=59.42
+[Server] Sent ACK to Device:1, Seq:51, Checksum:592
+[Server] Device:1, Seq:52, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.0,hum=46.95
+[Server] Sent ACK to Device:1, Seq:52, Checksum:593
+[Server] Device:1, Seq:53, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.52,hum=46.95
+[Server] Sent ACK to Device:1, Seq:53, Checksum:595
+[Server] Device:1, Seq:54, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=21.26,hum=44.15
+  Reading 1: temp=21.23,hum=58.95
+[Server] Sent ACK to Device:1, Seq:54, Checksum:596
+[Server] Device:1, Seq:55, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=25.73,hum=52.74
+  Reading 1: temp=26.79,hum=53.26
+[Server] Sent ACK to Device:1, Seq:55, Checksum:597
+[Server] Device:1, Seq:56, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.9,hum=59.38
+  Reading 1: temp=20.8,hum=57.25
+  Reading 2: temp=29.89,hum=44.26
+[Server] Sent ACK to Device:1, Seq:56, Checksum:598
+[Server] Device:1, Seq:57, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.48,hum=43.21
+  Reading 1: temp=22.98,hum=45.8
+  Reading 2: temp=24.66,hum=58.18
+[Server] Sent ACK to Device:1, Seq:57, Checksum:599
+[Server] Device:1, Seq:58, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=22.85,hum=48.95
+  Reading 1: temp=26.33,hum=50.38
+[Server] Sent ACK to Device:1, Seq:58, Checksum:600
+[Server] Device:1, Seq:59, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.09,hum=53.52
+  Reading 1: temp=28.77,hum=54.41
+  Reading 2: temp=20.34,hum=41.38
+[Server] Sent ACK to Device:1, Seq:59, Checksum:601
+[Server] Device:1, Seq:60, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.88,hum=41.72
+[Server] Sent ACK to Device:1, Seq:60, Checksum:602
+[Server] Device:1, Seq:61, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.68,hum=49.53
+[Server] Sent ACK to Device:1, Seq:61, Checksum:604
+[Server] Device:1, Seq:62, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.62,hum=51.73
+  Reading 1: temp=26.93,hum=49.1
+  Reading 2: temp=24.18,hum=51.19
+[Server] Sent ACK to Device:1, Seq:62, Checksum:605
+[Server] Device:1, Seq:63, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=25.7,hum=58.0
+  Reading 1: temp=23.68,hum=43.47
+  Reading 2: temp=27.08,hum=44.86
+[Server] Sent ACK to Device:1, Seq:63, Checksum:606
+[Server] Device:1, Seq:64, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=22.58,hum=54.46
+  Reading 1: temp=23.69,hum=47.8
+  Reading 2: temp=26.2,hum=59.18
+[Server] Sent ACK to Device:1, Seq:64, Checksum:607
+[Server] Device:1, Seq:65, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=23.92,hum=57.77
+[Server] Sent ACK to Device:1, Seq:65, Checksum:608
+[Server] Device:1, Seq:66, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.71,hum=53.76
+[Server] Sent ACK to Device:1, Seq:66, Checksum:609
+[Server] Device:1, Seq:67, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=20.53,hum=42.15
+  Reading 1: temp=23.92,hum=47.69
+[Server] Sent ACK to Device:1, Seq:67, Checksum:610
+[Server] Device:1, Seq:68, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.87,hum=59.83
+  Reading 1: temp=25.41,hum=40.45
+[Server] Sent ACK to Device:1, Seq:68, Checksum:611
+[Server] Device:1, Seq:69, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.99,hum=50.63
+[Server] Sent ACK to Device:1, Seq:69, Checksum:613
+[Server] Device:1, Seq:70, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=23.41,hum=52.4
+  Reading 1: temp=28.61,hum=56.95
+[Server] Sent ACK to Device:1, Seq:70, Checksum:614
+[Server] Device:1, Seq:71, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=26.65,hum=57.34
+  Reading 1: temp=24.61,hum=40.2
+  Reading 2: temp=25.01,hum=50.65
+[Server] Sent ACK to Device:1, Seq:71, Checksum:615
+[Server] Device:1, Seq:72, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=27.22,hum=57.07
+[Server] Sent ACK to Device:1, Seq:72, Checksum:616
+[Server] Device:1, Seq:73, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.82,hum=53.21
+  Reading 1: temp=24.82,hum=44.57
+  Reading 2: temp=24.54,hum=47.49
+[Server] Sent ACK to Device:1, Seq:73, Checksum:617
+[Server] Device:1, Seq:74, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.18,hum=54.48
+[Server] Sent ACK to Device:1, Seq:74, Checksum:618
+[Server] Device:1, Seq:75, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=23.65,hum=41.57
+[Server] Sent ACK to Device:1, Seq:75, Checksum:619
+[Server] Device:1, Seq:76, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=29.15,hum=52.81
+  Reading 1: temp=26.94,hum=40.44
+[Server] Sent ACK to Device:1, Seq:76, Checksum:620
+[Server] Device:1, Seq:77, Type=1, Batch=2, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=28.34,hum=49.83
+  Reading 1: temp=24.04,hum=47.65
+[Server] Sent ACK to Device:1, Seq:77, Checksum:622
+[Server] Device:1, Seq:78, Type=1, Batch=1, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=24.51,hum=51.53
+[Server] Sent ACK to Device:1, Seq:78, Checksum:623
+[Server] Device:1, Seq:79, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=21.44,hum=58.69
+  Reading 1: temp=24.13,hum=58.97
+  Reading 2: temp=23.14,hum=43.89
+[Server] Sent ACK to Device:1, Seq:79, Checksum:624
+[Server] Device:1, Seq:80, Type=1, Batch=3, Checksum:OK, Dup:0, Gap:0
+  Reading 0: temp=21.02,hum=53.8
+  Reading 1: temp=27.0,hum=56.73
+  Reading 2: temp=22.37,hum=59.78
+[Server] Sent ACK to Device:1, Seq:80, Checksum:625
+
+[Server] Received signal 15, shutting down...
+[Server] Saving sorted telemetry...
+[Server] Shutdown complete. Telemetry saved.
