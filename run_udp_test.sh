@@ -2,7 +2,7 @@
 
 # ===== CONFIG =====
 PCAP_FILE="/mnt/d/Github/Network-Project/udp_test_capture.pcap"
-TEST_DURATION=60   # default duration in seconds
+TEST_DURATION=20   # default duration in seconds
 INTERFACE="lo"     # network interface (adjust if needed)
 
 
@@ -26,7 +26,6 @@ sudo tc qdisc del dev $INTERFACE root 2>/dev/null
 case $SCENARIO in
     1)
         echo "Running Baseline scenario..."
-        # No impairment; nothing to add
         ;;
     2)
         echo "Running 5% packet loss scenario..."
@@ -47,14 +46,14 @@ sudo tcpdump -i $INTERFACE udp -w $PCAP_FILE &
 TCPDUMP_PID=$!
 
 # ===== START SERVER =====
-python3 /mnt/d/Github/Network-Project/server.py &
+python3 -u /mnt/d/Github/Network-Project/server.py &
 SERVER_PID=$!
 
 # ===== GIVE SERVER TIME TO START =====
 sleep 2
 
 # ===== START CLIENT =====
-python3 /mnt/d/Github/Network-Project/client.py &
+python3 -u /mnt/d/Github/Network-Project/client.py &
 CLIENT_PID=$!
 
 # ===== RUN TEST FOR FIXED DURATION =====
